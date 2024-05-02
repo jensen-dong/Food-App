@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desserts App</title>
+</head>
+<body>
+    <h1>Edit Dessert Page</h1>
+    <form action="/desserts/<%= id %>/?_method=PUT" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="<%= dessert.name %>">
+        <label for="color">Color</label>
+        <input type="text" name="color" id="color" value="<%= dessert.color %>">
+        <label for="readyToEat">Is Ready to Eat</label>
+        <input type="checkbox" name="readyToEat" id="readyToEat"
+        <% if (dessert.readyToEat) { %>
+            checked
+        <% } %>
+        />
+        <input type="submit" value="Edit dessert">
+    </form>
+</body>
+</html>
