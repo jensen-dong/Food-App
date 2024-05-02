@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/meats.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Fruits Show</title>
+</head>
+<body>
+    <h1><span id="meat-text"></span></h1>
+    <div class="meat-grid">
+        <% for( let index = 0; index < allMeats.length; index++ ) { %>
+            <% let meat = allMeats[index] %>
+            <div class="meat-item">
+                <h4><%= meat.name %></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iusto quia sequi ducimus officiis est.</p>
+                <a href="/meats/<%= index %>">Checkout more...</a>
+            </div>
+        <% } %>
+    </div>
+    <div class="links">
+        <h2>Add new meat</h2>
+        <a href="/meats/new">Add</a>
+        <h2>Go to fruits</h2>
+        <a href="/fruits">View fruits...</a>
+        <h2>Go to veggies</h2>
+        <a href="/veggies">View veggies...</a>
+        <h2>Check out the recipes</h2>
+        <a href="/recipes">View recipes...</a>
+        <h2>Want to get in touch? </h2>
+        <a href="/contact">Contact Us</a>
+
+    </div>
+
+    <!--typed js-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        const typed = new Typed('#meat-text', {
+            strings: ['All Meats', 'Salmon', 'Beef', 'Tuna', 'Chicken', 'Caviar', 'Pork'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+    </script>
+</body>
+</html>

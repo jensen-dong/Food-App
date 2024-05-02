@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/veggies.css">
+    <title>Veggies</title>
+</head>
+<body>
+    <h1><span id="veggie-text"></span></h1>
+    <div class="veggie-grid">
+        <% for( let index = 0; index < allVeggies.length; index++ ) { %>
+            <% let veggie = allVeggies[index] %>
+            <div class="veggie-item">
+                <h4><%= veggie.name %></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iusto quia sequi ducimus officiis est.</p>
+                <a href="/veggies/<%= index %>">Checkout more...</a>
+            </div>
+        <% } %>
+    </div>
+    <div class="links">
+        <h2>Add new veggie</h2>
+        <a href="/veggies/new">Add</a>
+        <h2>Go to fruits</h2>
+        <a href="/fruits">View fruits...</a>
+        <h2>Go to meats</h2>
+        <a href="/meats">View meats...</a>
+    </div>
+
+    <!--typed js-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        const typed = new Typed('#veggie-text', {
+            strings: ['All Veggies', 'Cucumber', 'Tomato', 'String Bean', 'Broccoli', 'Lettuce', 'Banana'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+    </script>
+</body>
+</html>

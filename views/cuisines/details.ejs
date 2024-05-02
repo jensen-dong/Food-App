@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/recipes.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Recipes by Region</h1>
+    <div class="grid">
+        <% for( let index = 0; index < regionRecipes.length; index++ ) { %>
+            <% let recipe = regionRecipes[index] %>
+            <div class="item">
+                <h4><%= recipe.name %></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iusto quia sequi ducimus officiis est.</p>
+            </div>
+        <% } %>
+    </div>
+    <a href="/cuisines">Go Back...</a>
+</body>
+</html>

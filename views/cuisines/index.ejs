@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/recipes.css">
+    <title>World Cuisines</title>
+</head>
+<body>
+    <h1>Cuisines by Region</h1>
+    <div class="grid">
+        <% for( let index = 0; index < allCuisines.length; index++ ) { %>
+            <% let cuisine = allCuisines[index] %>
+            <div class="item">
+                <h4><%= cuisine.name %></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iusto quia sequi ducimus officiis est.</p>
+                <a href="/cuisines/<%= index %>">See details</a>
+            </div>
+        <% } %>
+    </div>
+    <div class="links">
+        <h2>Go to fruits</h2>
+        <a href="/fruits">View fruits...</a>
+        <h2>Go to veggies</h2>
+        <a href="/veggies">View veggies...</a>
+        <h2>Go to meats</h2>
+        <a href="/meats">View meats...</a>
+        <h2>Want to get in touch? </h2>
+        <a href="/contact">Contact Us</a>
+    </div>
+</body>
+</html>
