@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contact.css">
+    <title>Salads</title>
+</head>
+<body>
+    
+
+      <section class="contact" id="contact">
+        <h2 class="heading">Add <span>New Dessert</span></h2>
+
+        <form action="/salads" method="POST">
+            <div class="input-row">
+                <div class="input-box">
+                    <input type="text" name="name" id="name" placeholder="Salad Name">
+                </div>
+                <div class="input-box">
+                    <input type="text" name="color" id="color" placeholder="Color">
+                </div>
+            </div>
+            <div class="input-row">
+                <label for="readyToEat">Is Ready to Eat?</label>
+                <div class="input-box">
+                    <input type="checkbox" name="readyToEat" id="readyToEat">
+                </div>
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
+            <input type="submit" value="Create salad" class="btn">
+        </form>
+    </section>
+</body>
+</html>
